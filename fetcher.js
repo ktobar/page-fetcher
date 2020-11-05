@@ -3,7 +3,7 @@ const request = require('request');
 const fs = require('fs');
 
 request(myArgs[0], (error, response, body) => {
-  
+
   if (myArgs[1][0] !== '.' || myArgs[1][1] !== '/') {
     console.log(`Invalid Local File: `, myArgs[1]);
     process.exit();
@@ -21,6 +21,5 @@ request(myArgs[0], (error, response, body) => {
     let len = Buffer.byteLength(body);
     console.log(`Downloaded and saved ${len} bytes to ${myArgs[1]}`);
   });
-  
 });
 
